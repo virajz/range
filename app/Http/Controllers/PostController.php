@@ -17,16 +17,16 @@ class PostController extends Controller
         $all = Post::oldest('id')->get();
 
         $posts = Post::oldest('id');
-        $from = 1;
-        $to = 6;
+        $from  = 2;
+        $to    = 4;
 
-        $posts->where(function($query) use ($from, $to) {
+        $posts->where(function ($query) use ($from, $to) {
             $query->where('from', '>=', $from)
                 ->where('to', '<=', $to);
-        })->orWhere(function($query) use ($from, $to) {
+        })->orWhere(function ($query) use ($from, $to) {
             $query->where('from', '<=', $from)
                 ->where('to', '>=', $to);
-        })->orWhere(function($query) use ($from, $to) {
+        })->orWhere(function ($query) use ($from, $to) {
             $query->whereBetween('from', [$from, $to])
                 ->orWhereBetween('to', [$from, $to]);
         });
