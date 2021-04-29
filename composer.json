@@ -12,7 +12,7 @@
         "facade/ignition": "^2.3.6",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "8.0",
+        "laravel/framework": "8.40.0",
         "laravel/helpers": "^1.4",
         "laravel/legacy-factories": "^1.1",
         "laravel/tinker": "^2.0",
